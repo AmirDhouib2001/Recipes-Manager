@@ -2,7 +2,8 @@
 require __DIR__ . '/../classes/Autoloader.php';
 Autoloader::register();
 session_start();
-use recettes\Template ;
+
+use classes\recettes\Template;
 use recettes\AjoutRecette;
 
 $recette=new AjoutRecette();

@@ -6,7 +6,7 @@ session_start();
 class Search extends PdoWrapper
 {
 
-    public function __construct($db_name, $db_host = '127.0.0.1', $db_port = '3306', $db_user = 'root', $db_pwd = 'root')
+    public function __construct($db_name, $db_host = '127.0.0.1', $db_port = '3306', $db_user = 'root', $db_pwd = '')
     {
         parent::__construct($db_name, $db_host, $db_port, $db_user, $db_pwd);
     }

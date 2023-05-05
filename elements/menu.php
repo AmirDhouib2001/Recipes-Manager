@@ -1,5 +1,7 @@
 <?php
 require __DIR__ . '/../classes/Autoloader.php';
+
+
 Autoloader::register();
 session_start() ;
 
@@ -12,7 +14,6 @@ $data =$gdb->getAllRecettes();
 
 <?php ob_start() ?>
 
-<div class="title">Recette</div>
 <section class="liste_recette">
     <?php foreach ($data as $d): ?>
         <?= $d->getHTML(); ?>
@@ -20,4 +21,4 @@ $data =$gdb->getAllRecettes();
 
 
 <?php $content=ob_get_clean() ?>
-<?php Template::render($content) ?>
+<?php \recettes\Template::render($content) ?>

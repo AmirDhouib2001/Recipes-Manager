@@ -1,7 +1,9 @@
 <?php
 require "classes/Autoloader.php";
 Autoloader::register();
-use recettes\Template;
+
+use classes\recettes\Template;
+
 session_start();
 ?>
 
