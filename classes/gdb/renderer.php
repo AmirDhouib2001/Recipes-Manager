@@ -1,6 +1,6 @@
 <?php
 
-namespace classes\gdb;
+namespace gdb;
 
 class renderer
 {

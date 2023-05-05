@@ -6,13 +6,9 @@ class menu extends PdoWrapper
 {
 
     public const UPLOAD_DIR = "images/" ;
-    public function __construct(){
-        parent::__construct(
-            $GLOBALS['db_name'],
-            $GLOBALS['db_host'],
-            $GLOBALS['db_port'],
-            $GLOBALS['db_user'],
-            $GLOBALS['db_pwd']) ;
+    public function __construct($db_name, $db_host = '127.0.0.1', $db_port = '3306', $db_user = 'root', $db_pwd = 'root')
+    {
+        parent::__construct($db_name, $db_host, $db_port, $db_user, $db_pwd);
     }
 
     public function getAllRecettes(){
