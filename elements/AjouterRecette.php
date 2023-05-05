@@ -11,10 +11,10 @@ $recette=new AjoutRecette();
 if (isset($_POST['Nom_Recette']) and isset($_POST['Tag'])){
     //recupere les données de la nouvelles recette
     $Nom_Recette = $_POST['Nom_Recette'] ;
-    $Tag = $_POST['Tag'] ;
-    $ingredients=$_POST['ingredients'];
+    $Imgsrc = $_POST['Imgsrc'] ;
+    $description=$_POST['description'];
     if (!empty($tag) and !empty($Nom_Recette) and !empty($ingredients)){
-        //TODO Ajouter requete SQL POUR LA NOUVELLE RECETTE
+        createRecette($Nom_Recette,$description,$Imgsrc);
         header("Location: /projetweb/index.php");
         exit() ;
     }
