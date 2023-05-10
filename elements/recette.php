@@ -9,14 +9,14 @@ use gdb\renderer ;
 use gdb\menu ;
 
 $gdb = new \gdb\menu("recettes") ;
-$data =$gdb->getAllRecettes();
+$data =$gdb->getIngredients();
 ?>
 
 <?php ob_start() ?>
 
     <section class="liste_recette">
 <?php foreach ($data as $d): ?>
-    <?= $d->getHTML(); ?>
+    <?= $d->getHTMIngredient(); ?>
 <?php endforeach;?>
 
 

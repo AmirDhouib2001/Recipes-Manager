@@ -5,10 +5,10 @@
         <img src="/images/Zwita2.png" alt="Logo">
     </div>
     <div class="search-dropdown-container">
-        <form class="search-form" method="post">
+        <form class="search-form" method="post" action="/projetweb/elements/search.php">
 
-            <input type="text" placeholder="Search">
-            <button type="submit" name="search">Search</button>
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit" >Search</button>
         </form>
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
@@ -51,10 +51,8 @@
             </div>
         </div>
     <?php else: ?>
-    <a class="login-btn"  role="button" href="elements/login.php">Login</a>
+    <a class="login-btn"  role="button" href="/projetweb/elements/login.php">Login</a>
     <?php endif; ?>
-
-
 
 
 

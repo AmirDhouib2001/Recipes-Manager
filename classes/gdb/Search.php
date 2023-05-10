@@ -24,7 +24,7 @@ class Search extends PdoWrapper
                     FROM listeingredient 
                     JOIN ingredient ON listeingredient.idIngredient = ingredient.idIngredient 
                     WHERE listeingredient.idRecette = recette.idRecette 
-                    AND ingredient.name_ingredient ='%$search%') ";
+                    AND ingredient.name_ingredient LIKE '%$search%') ";
 
                 $query .= "OR EXISTS (
                    SELECT *
@@ -38,17 +38,9 @@ class Search extends PdoWrapper
                  $results=$this->exec($query,null);
 
 
-                $recettes = [];
 
-                foreach ($results as $result) {
-                    $renderer = new \gdb\renderer();
-                    $renderer->name_recette = $result->name_recette;
-                    $renderer->description = $result->description;
-                    $renderer->Imgsrc = $result->Imgsrc;
-                    $recettes[] = $renderer;
-                }
 
-                return $recettes;
+                return $results;
             }
         }
 

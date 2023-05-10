@@ -30,7 +30,7 @@ class menu extends PdoWrapper
     }
     public function getIngredients(){
         return $this->exec(
-            "SELECT * FROM ingredient WHERE  ",
+            "SELECT * FROM ingredient  ",
             null,
             'gdb\renderer') ;
     }
