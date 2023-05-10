@@ -14,7 +14,7 @@
     <ul class="nav-links">
         <li><a href="#footer" class="first-menu">About</a></li>
         <li><a href="#">Services</a></li>
-        <li><a href="#">Cuisine</a></li>
+        <li><a href="/projetweb/elements/menu.php">Cuisine</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
     <?php if($logged):?>

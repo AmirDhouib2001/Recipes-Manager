@@ -18,6 +18,23 @@ class menu extends PdoWrapper
             'gdb\renderer') ;
     }
 
+    public  function getRecetteName(){
+
+        if (isset($_GET['title'])) {
+            $title = urldecode($_GET['title']);
+            return $title;
+            // Use $title to retrieve more details about the recipe from the database
+        }
+
+
+    }
+    public function getIngredients(){
+        return $this->exec(
+            "SELECT * FROM ingredient WHERE  ",
+            null,
+            'gdb\renderer') ;
+    }
+
 
 
 }

@@ -22,4 +22,4 @@ if (isset($_POST['Nom_Recette']) and isset($_POST['Tag'])){
 ob_start();
 $recette->generate_recipe_form();
 $code=ob_get_clean();
-Template::render($code);
+\recettes\Template::render($code);

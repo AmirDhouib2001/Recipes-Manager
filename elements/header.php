@@ -5,7 +5,8 @@
         <img src="/images/Zwita2.png" alt="Logo">
     </div>
     <div class="search-dropdown-container">
-        <form class="search-form">
+        <form class="search-form" method="post">
+
             <input type="text" placeholder="Search">
             <button type="submit" name="search">Search</button>
         </form>

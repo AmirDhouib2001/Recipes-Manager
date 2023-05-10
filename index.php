@@ -12,4 +12,4 @@ session_start();
     <?php echo __DIR__ ?>
 </div>
 <?php $code = ob_get_clean() ?>
-<?php Template::render($code);?>
+<?php \recettes\Template::render($code);?>
