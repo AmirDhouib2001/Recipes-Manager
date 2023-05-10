@@ -29,8 +29,13 @@ class menu extends PdoWrapper
 
     }
     public function getIngredients(){
+        $name=$this->getRecetteName();
         return $this->exec(
-            "SELECT * FROM ingredient  ",
+            "SELECT *  
+FROM ingredient
+JOIN listeingredient  ON ingredient.idIngredient = listeingredient.idIngredient 
+JOIN recette  ON listeingredient.idRecette = recette.idRecette 
+WHERE recette.name_recette LIKE  '%$name%'",
             null,
             'gdb\renderer') ;
     }

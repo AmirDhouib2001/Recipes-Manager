@@ -2,7 +2,6 @@
 
 namespace gdb;
 use \pdo_wrapper\PdoWrapper;
-session_start();
 class Search extends PdoWrapper
 {
     public const UPLOAD_DIR = "images/" ;
@@ -51,8 +50,8 @@ class Search extends PdoWrapper
             $query="SELECT * FROM recette 
         JOIN listetags ON recette.idRecette = listetags.idRecette 
         JOIN tag ON listetags.idTag=tag.idTag 
-        WHERE tag.nomTag LIKE  '%$radio%')";
-            return $this->exec($query);
+        WHERE tag.nomTag LIKE  '%$radio%'";
+            return $this->exec($query,null);
         }
     }
 }

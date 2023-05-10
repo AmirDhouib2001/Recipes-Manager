@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../classes/Autoloader.php';
-
+session_start();
 
 Autoloader::register();
 
@@ -13,7 +13,11 @@ if (isset($_POST["search"])) {
 }else{
     $datas=null;
 }
-
+if(isset($_POST["menu-item"])){
+    $radio = $gdb->getRecetteByRadio();
+}else{
+    $radio=null;
+}
 ?>
 
 <?php ob_start() ?>
@@ -21,7 +25,7 @@ if (isset($_POST["search"])) {
 
 
     <section class="liste_recette">
-    <?php if($datas) {
+<?php if($datas) {
     foreach ($datas as $d) {
         $renderer = new \gdb\renderer();
         $renderer->name_recette = $d->name_recette;
@@ -29,10 +33,22 @@ if (isset($_POST["search"])) {
         $renderer->Imgsrc = $d->Imgsrc;
         $renderer->getHTML();
     }
-    }else { echo 'nothing' ;}
-
-
+}else
 
 ?>
+    <section class="liste_recette">
+<?php if($radio) {
+    foreach ($radio as $d) {
+        $renderer = new \gdb\renderer();
+        $renderer->name_recette = $d->name_recette;
+        $renderer->description = $d->description;
+        $renderer->Imgsrc = $d->Imgsrc;
+        $renderer->getHTML();
+    }
+}
+?>
+
+
+
 <?php $content=ob_get_clean() ?>
 <?php \recettes\Template::render($content) ?>

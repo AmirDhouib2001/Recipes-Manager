@@ -13,10 +13,11 @@ $data =$gdb->getIngredients();
 ?>
 
 <?php ob_start() ?>
+<?php ?>
 
-    <section class="liste_recette">
+
 <?php foreach ($data as $d): ?>
-    <?= $d->getHTMIngredient(); ?>
+    <?= $d->getHTMLingredient(); ?>
 <?php endforeach;?>
 
 

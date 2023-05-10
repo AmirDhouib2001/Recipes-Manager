@@ -10,35 +10,37 @@
             <input type="text" name="search" placeholder="Search">
             <button type="submit" >Search</button>
         </form>
+        <form method="post" action="">
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
                 <label class="radio">
-                    <input type="radio" name="menu-item" value="item1">
-                    <span>Item 1</span>
+                    <input type="radio" name="menu-item" value="Chaud">
+                    <span>Chaud</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" name="menu-item" value="item2">
-                    <span>Item 2</span>
+                    <input type="radio" name="menu-item" value="Froid">
+                    <span>Froid</span>
                 </label>
                 <label class="radio">
-                    <input type="radio" name="menu-item" value="item3">
-                    <span>Item 3</span>
+                    <input type="radio" name="menu-item" value="Salé">
+                    <span>Salé </span>
                 </label>
                 <label class="radio">
-                    <input type="radio" name="menu-item" value="item4">
-                    <span>Item 4</span>
+                    <input type="radio" name="menu-item" value="Sucré ">
+                    <span>Sucré </span>
                 </label>
                 <label class="radio">
-                    <input type="radio" name="menu-item" value="item5">
-                    <span>Item 5</span>
+                    <input type="radio" name="menu-item" value="entrée">
+                    <span>Entrée </span>
                 </label>
                 <label class="radio">
-                    <input type="radio" name="menu-item" value="item6">
-                    <span>Item 6</span>
+                    <input type="radio" name="menu-item" value="Dessert">
+                    <span>Dessert</span>
                 </label>
             </div>
         </div>
+        </form>
     </div>
     <?php if($logged):?>
         <div class="dropdown1">
@@ -51,7 +53,7 @@
             </div>
         </div>
     <?php else: ?>
-    <a class="login-btn"  role="button" href="/projetweb/elements/login.php">Login</a>
+        <a class="login-btn"  role="button" href="/projetweb/elements/login.php">Login</a>
     <?php endif; ?>
 
 

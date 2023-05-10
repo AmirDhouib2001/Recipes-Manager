@@ -40,21 +40,21 @@ CREATE TABLE IF NOT EXISTS `ingredient` (
 --
 
 INSERT INTO `ingredient` (`idIngredient`, `name_ingredient`, `imgsrc`) VALUES
-(1, 'Tomate', 'Tomate'),
-(2, 'Oignon ', 'Oignon'),
-(3, 'Ail', 'Ail'),
-(4, 'Carotte ', 'Carotte'),
-(5, 'Courgette', 'Courgette'),
-(6, 'Pois chiches ', 'Poischiches'),
-(7, 'Pomme de terre ', 'Pommedeterre'),
-(8, 'Camembert ', 'Camembert'),
-(9, 'Chocolat', 'Chocolat'),
-(10, 'Oeuf', 'Oeuf'),
-(11, 'Coriandre ', 'Coriandre'),
-(12, 'Farine ', 'Farine'),
-(13, 'Semoule ', 'Semoule'),
-(14, 'Fromage ', 'Fromage'),
-(15, 'Lait Concentré', 'LaitConcentré');
+(1, 'Tomate', 'Tomate.jpeg'),
+(2, 'Oignon ', 'Oignon.jpg'),
+(3, 'Ail', 'Ail.webp'),
+(4, 'Carotte ', 'Carotte.jpg'),
+(5, 'Courgette', 'Courgette.jpeg'),
+(6, 'Pois chiches ', 'Poischiches.jpeg'),
+(7, 'Pomme de terre ', 'Pommedeterre.jpeg'),
+(8, 'Camembert ', 'Camembert.jpeg'),
+(9, 'Chocolat', 'Chocolat.webp'),
+(10, 'Oeuf', 'Oeuf.webp'),
+(11, 'Coriandre ', 'Coriandre.jpeg'),
+(12, 'Farine ', 'Farine.jpeg'),
+(13, 'Semoule ', 'Semoule.webp'),
+(14, 'Fromage ', 'Fromage.jpg'),
+(15, 'Lait Concentré', 'LaitConcentré.jpg');
 
 -- --------------------------------------------------------
 

@@ -14,10 +14,11 @@ $data =$gdb->getAllRecettes();
 
 <?php ob_start() ?>
 
-<section class="liste_recette">
+<section>
     <?php foreach ($data as $d): ?>
         <?= $d->getHTML(); ?>
     <?php endforeach;?>
+    <?php echo $gdb->getRecetteName()?>
 
 
 <?php $content=ob_get_clean() ?>
