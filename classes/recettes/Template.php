@@ -30,7 +30,7 @@ class Template
             <script src="/script/index.js"></script>
             <meta http-equiv="Content-Type" content="text/css">
 
-            <title>Our Restaurant</title>
+            <title>Zwita Food</title>
         </head>
         <body>
         <?php include(__DIR__ . '/../../elements/header.php'); ?>

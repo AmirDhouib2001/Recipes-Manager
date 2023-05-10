@@ -46,5 +46,15 @@ class renderer
 
     <?php }
 
+        public function getHTMLdescription1(){ ?>
+            <article>
+                <?= $this->description ?>
+
+
+            </article>
+
+
+    <?php }
+
 
 }?>

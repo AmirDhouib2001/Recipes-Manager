@@ -45,13 +45,19 @@ class Search extends PdoWrapper
 
 
     public function getRecetteByRadio(){
-        if(isset($_POST["menu-item"])){
-            $radio=$_POST['menu-item'];
-            $query="SELECT * FROM recette 
+        if (isset($_POST['menu-item'])) {
+            $items = $_POST['menu-item'];
+            if(!empty($items)){
+                $items = array_map(function($value) {
+                    return "'" . $value . "'";
+                }, $items);
+                $items_str = implode("','", $items);
+                $query = "SELECT * FROM recette 
         JOIN listetags ON recette.idRecette = listetags.idRecette 
         JOIN tag ON listetags.idTag=tag.idTag 
-        WHERE tag.nomTag LIKE  '%$radio%'";
-            return $this->exec($query,null);
+        WHERE tag.nomTag IN ($items_str)";
+                return $this->exec($query,null);
+            }
         }
     }
 }

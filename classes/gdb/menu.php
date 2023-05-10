@@ -28,6 +28,14 @@ class menu extends PdoWrapper
 
 
     }
+
+    public function getRecettedescription(){
+        $name=$this->getRecetteName();
+        return $this->exec(
+            "SELECT recette.description FROM recette WHERE recette.name_recette LIKE  '%$name%'",
+            null,
+            'gdb\renderer') ;
+    }
     public function getIngredients(){
         $name=$this->getRecetteName();
         return $this->exec(

@@ -8,13 +8,15 @@ session_start() ;
 use gdb\renderer ;
 use gdb\menu ;
 
-$gdb = new \gdb\menu("recettes") ;
+$gdb = new \gdb\menu("recettes");
 $data =$gdb->getIngredients();
+$desc=$gdb->getRecettedescription();
 ?>
 
 <?php ob_start() ?>
-<?php ?>
-
+<?php foreach ($desc as $d): ?>
+<?= $d->getHTMLdescription1(); ?>
+<?php endforeach;?>
 
 <?php foreach ($data as $d): ?>
     <?= $d->getHTMLingredient(); ?>

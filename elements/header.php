@@ -10,36 +10,36 @@
             <input type="text" name="search" placeholder="Search">
             <button type="submit" >Search</button>
         </form>
-        <form method="post" action="">
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-                <label class="radio">
-                    <input type="radio" name="menu-item" value="Chaud">
-                    <span>Chaud</span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="menu-item" value="Froid">
-                    <span>Froid</span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="menu-item" value="Salé">
-                    <span>Salé </span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="menu-item" value="Sucré ">
-                    <span>Sucré </span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="menu-item" value="entrée">
-                    <span>Entrée </span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="menu-item" value="Dessert">
-                    <span>Dessert</span>
-                </label>
+        <form method="post" action="/projetweb/elements/search.php">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <label class="checkbox">
+                        <input type="checkbox" name="menu-item[]" value="Chaud">
+                        <span>Chaud</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="menu-item[]" value="Froid">
+                        <span>Froid</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="menu-item[]" value="Salé">
+                        <span>Salé </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="menu-item[]" value="Sucré ">
+                        <span>Sucré </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="menu-item[]" value="entrée">
+                        <span>Entrée </span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="menu-item[]" value="Dessert">
+                        <span>Dessert</span>
+                    </label>
+                </div>
             </div>
-        </div>
         </form>
     </div>
     <?php if($logged):?>
