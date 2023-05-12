@@ -12,7 +12,7 @@ $gdb = new \gdb\menu("recettes");
 $button=new renderer();
 $data =$gdb->getIngredients();
 $desc=$gdb->getRecettedescription();
-$button->generatebutton()
+$button->generatebutton();
 ?>
 <?php
 ?>

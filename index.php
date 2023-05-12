@@ -8,8 +8,8 @@ session_start();
 ?>
 
 <?php ob_start() ?>
-<div class="">
-    <?php echo __DIR__ ?>
+<div class="welcome">
+    Welcome
 </div>
 <?php $code = ob_get_clean() ?>
 <?php \recettes\Template::render($code);?>

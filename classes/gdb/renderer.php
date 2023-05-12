@@ -21,15 +21,21 @@ class renderer
 
 
 
+
         </article>
+
+
+
+
 
 
     <?php }
 
+
     public function getHTMLingredient(){ ?>
         <div class="wrapper">
             <article>
-                <h2><a href="?title=<?= urlencode($this->name_ingredient) ?>"><?= $this->name_ingredient ?></a></h2>
+                <h2><?= $this->name_ingredient ?></h2>
                 <div class="imagerecette">
                     <?php if($this->imgsrc != null) : ?>
                     <img src="<?= "/projetweb" . "/" . \gdb\Search::UPLOAD_DIR . $this->imgsrc ?>">
@@ -37,9 +43,6 @@ class renderer
                 <?php endif; ?>
 
 
-                <div class="overlay overlay1">
-
-                </div>
             </article>
         </div>
 
@@ -57,6 +60,16 @@ class renderer
 
 
     <?php }
+    public  function getRecetteName(){
+
+        if (isset($_GET['title'])) {
+            $title = urldecode($_GET['title']);
+            return $title;
+            // Use $title to retrieve more details about the recipe from the database
+        }
+
+
+    }
      public function generatebutton(){ ?>
          <?php $logged=isset($_SESSION['nickname']) ?>
          <?php if($logged):?>
@@ -64,16 +77,16 @@ class renderer
              <form method="post">
                 <button name="delete" type="submit" class="buttondetruire" onclick="confirmdelete()">Detruire</button>
              </form>
-             <form action="/projetweb/elements/modifier.php" method="post">
+             <form action="/projetweb/elements/modifier.php?title=<?= urlencode($this->getRecetteName())?>" method="post">
 
 
              <button name="modifier" type="submit" class="buttonmodifier">Modifier</button>
-             <form method="post">
+             </form>
 
          <?php endif; ?>
 
 <?php
-     }
+    }
 
 
 }?>

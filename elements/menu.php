@@ -18,7 +18,6 @@ $data =$gdb->getAllRecettes();
     <?php foreach ($data as $d): ?>
         <?= $d->getHTML(); ?>
     <?php endforeach;?>
-    <?php echo $gdb->getRecetteName()?>
 
 
 <?php $content=ob_get_clean() ?>

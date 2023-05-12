@@ -351,6 +351,7 @@ article img {
     width: 140px;
     height: 140px;
     border-radius: 50%;
+    margin-left: 28px;
 }
 
 article h3 {
@@ -693,7 +694,7 @@ article {
     color: black;
     position: absolute;
     margin-left:70px;
-    margin-top: 100px;
+    margin-top: 500px;
     border: 2px solid black;
     border-radius: 4px;
     background-color: #fff;
@@ -739,6 +740,44 @@ article {
     width: 100%;
 
 }
+
+
+#login-form1 *{
+    width: 100%;
+    margin: 8px 0;
+}
+#login-form1 input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+#login-form1 label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+#login-form1 legend{
+    font-size: 24px;
+    padding: 10px;
+    width: 100%;
+    background-color: darkgrey;
+
+}
+#login-form1 button{
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+
+}
 #error {
     margin: 5px 0;
     background: white;
@@ -756,6 +795,7 @@ article {
     position: absolute;
     bottom: 0px;
     margin-left: 57px;
+    margin-bottom: 250px;
     background-color: red;
     color: #fff;
     border: none;
@@ -775,6 +815,7 @@ article {
     position: absolute;
     bottom: 0px;
     margin-left: 160px;
+    margin-bottom: 250px;
     background-color: red;
     color: #fff;
     border: none;
@@ -807,6 +848,13 @@ article {
     font-size: 15px;
     cursor: pointer;
 }
+
+.welcome {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
 
 
 

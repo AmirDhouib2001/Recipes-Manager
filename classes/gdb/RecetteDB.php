@@ -35,7 +35,7 @@ class RecetteDB extends PdoWrapper
             if (!$uploaded) die("FILE NOT UPLOADED") ;
         }else echo "NO IMAGE !!!!" ;
 
-        $query = 'INSERT INTO games(name, description, Imgsrc) VALUES (:name, :description, :image)';
+        $query = 'INSERT INTO recette(name, description, Imgsrc) VALUES (:name, :description, :image)';
         $params=[
             'name' => htmlspecialchars($name),
             'description' => htmlspecialchars($description),

@@ -2,7 +2,10 @@
 
 <header class="header1">
     <div class="logo-container">
-        <img src="/images/Zwita2.png" alt="Logo">
+        <a href="/projetweb/elements/menu.php">
+            <img src="/images/Zwita2.png" alt="Logo">
+        </a>
+
     </div>
     <div class="search-dropdown-container">
         <form class="search-form" method="post" action="/projetweb/elements/search.php">
