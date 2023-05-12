@@ -36,7 +36,8 @@ CREATE TABLE IF NOT EXISTS `ingredient` (
 ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `ingredient`
+-- Déchargement des don
+-- nées de la table `ingredient`
 --
 
 INSERT INTO `ingredient` (`idIngredient`, `name_ingredient`, `imgsrc`) VALUES

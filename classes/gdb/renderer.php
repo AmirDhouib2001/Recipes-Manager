@@ -9,7 +9,8 @@ class renderer
 
 
     public function getHTML(){ ?>
-        <div class="wrapper">
+
+
         <article>
 <h2><a href="recette.php?title=<?= urlencode($this->name_recette) ?>"><?= $this->name_recette ?></a></h2>
             <div class="imagerecette">
@@ -19,12 +20,10 @@ class renderer
                 <?php endif; ?>
 
 
-                <div class="overlay overlay1">
-                    <?= $this->description ?>
 
-                </div>
-            </div>
         </article>
+
+
     <?php }
 
     public function getHTMLingredient(){ ?>
@@ -44,17 +43,37 @@ class renderer
             </article>
         </div>
 
+
     <?php }
 
         public function getHTMLdescription1(){ ?>
+
             <article>
+                <div class="desc">
                 <?= $this->description ?>
 
-
+                </div>
             </article>
 
 
     <?php }
+     public function generatebutton(){ ?>
+         <?php $logged=isset($_SESSION['nickname']) ?>
+         <?php if($logged):?>
+
+             <form method="post">
+                <button name="delete" type="submit" class="buttondetruire" onclick="confirmdelete()">Detruire</button>
+             </form>
+             <form action="/projetweb/elements/modifier.php" method="post">
+
+
+             <button name="modifier" type="submit" class="buttonmodifier">Modifier</button>
+             <form method="post">
+
+         <?php endif; ?>
+
+<?php
+     }
 
 
 }?>

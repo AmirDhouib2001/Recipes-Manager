@@ -25,3 +25,8 @@ const scrollToBottom = () => {
 
 const goBottomLink = document.querySelector('a[href="#footer"]');
 goBottomLink.addEventListener('click', scrollToBottom);
+
+
+function confirmdelete(){
+    return confirm("Vous etes sure ??")
+}

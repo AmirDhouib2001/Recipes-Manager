@@ -24,7 +24,6 @@ if(isset($_POST["menu-item"])){
 
 
 
-    <section class="liste_recette">
 <?php if($datas) {
     foreach ($datas as $d) {
         $renderer = new \gdb\renderer();
@@ -36,7 +35,6 @@ if(isset($_POST["menu-item"])){
 }else
 
 ?>
-    <section class="liste_recette">
 <?php if($radio) {
     foreach ($radio as $d) {
         $renderer = new \gdb\renderer();
