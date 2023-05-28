@@ -9,7 +9,7 @@
     </div>
     <ul class="nav-links">
 
-        <li><a href="/projetweb/elements/menu.php">Cuisine</a></li>
+        <li><a href="/projetweb/elements/menu.php">Recettes</a></li>
       
     </ul>
 </nav>

@@ -2,6 +2,9 @@
 
 namespace gdb;
 use gdb\menu;
+use pdo_wrapper\PdoWrapper;
+
+
 
 class renderer
 {
@@ -10,20 +13,22 @@ class renderer
 
     public function getHTML(){ ?>
 
-
+      <div class="wrapper">
         <article>
-<h2><a href="recette.php?title=<?= urlencode($this->name_recette) ?>"><?= $this->name_recette ?></a></h2>
+
             <div class="imagerecette">
                 <?php if($this->Imgsrc != null) : ?>
                     <img src="<?= "/projetweb" . "/" . \gdb\Search::UPLOAD_DIR . $this->Imgsrc ?>">
-
                 <?php endif; ?>
+                <h2><a href="recette.php?title=<?= urlencode($this->name_recette) ?>"><?= $this->name_recette ?></a></h2>
+
+
 
 
 
 
         </article>
-
+      </div>
 
 
 
@@ -35,13 +40,13 @@ class renderer
     public function getHTMLingredient(){ ?>
         <div class="wrapper">
             <article>
-                <h2><?= $this->name_ingredient ?></h2>
+
                 <div class="imagerecette">
                     <?php if($this->imgsrc != null) : ?>
                     <img src="<?= "/projetweb" . "/" . \gdb\Search::UPLOAD_DIR . $this->imgsrc ?>">
 
                 <?php endif; ?>
-
+                    <h2><?= $this->name_ingredient ?></h2>
 
             </article>
         </div>
@@ -87,6 +92,18 @@ class renderer
 
 <?php
     }
+    public function getTags(){
+        $name=$this->getRecetteName();
+        return $this->exec(
+            "SELECT tag.nomTag  
+FROM tag
+JOIN listetags  ON tag.idTag = listetags.idTag
+JOIN recette  ON listetags.idRecette = recette.idRecette 
+WHERE recette.name_recette LIKE '%$name%'",
+            null) ;
+    }
+
+
 
 
 }?>

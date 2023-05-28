@@ -15,7 +15,7 @@
         </form>
         <form method="post" action="/projetweb/elements/search.php">
             <div class="dropdown">
-                <button class="dropbtn">Menu</button>
+                <button class="dropbtn">Tag</button>
                 <div class="dropdown-content">
                     <label class="checkbox">
                         <input type="checkbox" name="menu-item[]" value="Chaud">
